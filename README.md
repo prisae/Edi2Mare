@@ -1,8 +1,10 @@
 # Edi2Mare
 
 `Edi2Mare` is a little GUI to help you to convert EDI-files into the correct
-format to run inversions with `MARE2DEM`. So far it has only be used with
-files created with `ProcMT` and with `WinGLink`.
+format to run inversions with `MARE2DEM`. Its development has been sponsored by
+**GEOTEM Ingeniería S.A. de C.V.** in Mexico City, and it has been released to
+the public under the GNU General Public License V3. So far it has only be used
+with files created with `ProcMT` and with `WinGLink`.
 
 1. `MARE2DEM` is a parallel adaptive finite element code for 2D forward and
    inverse modeling for electromagnetic geophysics. It was developed with
@@ -68,17 +70,14 @@ information. A few notes:
   1. In the data-folder you need a file `coordinates.txt`. The format of this
      file is:
 
-     `Name        Easting         Northing      Altitude`
+     > Name        Easting         Northing      Altitude
 
      For instance:
 
-     `10_MT-1       749570.000      2224523.000      1620.125`
-
-     `11_MT-2       747507.000      2223857.000      1565.855`
-
-     `12_MT-3       745604.000      2224368.000      1526.000`
-
-     `13_MT-Test    755432.000      2222445.000      1795.514`
+     > 10_MT-1       749570.000      2224523.000      1620.125
+     > 11_MT-2       747507.000      2223857.000      1565.855
+     > 12_MT-3       745604.000      2224368.000      1526.000
+     > 13_MT-Test    755432.000      2222445.000      1795.514
 
   2. The names of the `*.edi`-, `*.wln`-, and `*.tem`-files and the names of
      `coordinates.txt` have to start with the same 2-digit number, for instance:
@@ -86,7 +85,7 @@ information. A few notes:
      * `13_mt_auto_processing_median.edi`
      * `13_NETEM.tem`
      * `coordinates.txt`
-       `13_MT-Test     755432.000      2222445.000    1795.514`
+       > 13_MT-Test     755432.000      2222445.000    1795.514
 
      The part following the number (`##_`) in the names of `coordinates.txt`
      is used to name the receivers; in the example the used name for that
