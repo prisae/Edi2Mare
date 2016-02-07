@@ -3,18 +3,19 @@
 `Edi2Mare` is a little GUI to help you to convert EDI-files into the correct
 format to run inversions with `MARE2DEM`. Its development has been sponsored by
 **GEOTEM Ingeniería S.A. de C.V.** in Mexico City, and it has been released to
-the public under the GNU General Public License V3. So far it has only be used
-with files created with `ProcMT` and with `WinGLink`.
+the public under the GNU General Public License V3. So far it has only been
+used with files created with `ProcMT` and with `WinGLink`.
 
-1. `MARE2DEM` is a parallel adaptive finite element code for 2D forward and
-   inverse modeling for electromagnetic geophysics. It was developed with
-   funding support from the Scripps Seafloor Electromagnetic Methods
-   Consortium, <http://mare2dem.ucsd.edu>.
-2. `ProcMT` is free and open-source software to process MT data, provided by
-   Metronix Geophysics, <http://geo-metronix.de>.
-3. `WinGLink` is a multidisciplinary software program developed to process,
-   interpret and integrate several geophysical disciplines in a unique
-   interpretation model, <http://www.slb.com>.
+
+* `MARE2DEM` is a parallel adaptive finite element code for 2D forward and
+  inverse modeling for electromagnetic geophysics. It was developed with
+  funding support from the Scripps Seafloor Electromagnetic Methods
+  Consortium, <http://mare2dem.ucsd.edu>.
+* `ProcMT` is free and open-source software to process MT data, provided by
+  Metronix Geophysics, <http://geo-metronix.de>.
+* `WinGLink` is a multidisciplinary software program developed to process,
+  interpret and integrate several geophysical disciplines in a unique
+  interpretation model, developed by Schlumberger <http://www.slb.com>.
 
 
 ## Some warnings:
@@ -33,21 +34,19 @@ with files created with `ProcMT` and with `WinGLink`.
 
 With `Edi2Mare` you can:
 
-* Prepare `*.edi`-files for `Mamba2D` and `MARE2DEM`.
-* Use `*.tem`-files to correct for *static shift*.
+* Prepare `*.edi`-files for `Mamba2D` and `MARE2DEM`; `Edi2Mare` will create
+  the file `*.emdata`, which can subsequently be loaded with `Mamba2D`.
+* Correct for *Static Shift* by using *TEM*-data; automatic estimation is
+  possible.
 * You can use `*.wln`-files, exported from *WinGLink*, instead of `*.edi`-files.
 * Adjust the altitude of the receivers, *Z-shift* (`MARE2DEM` requires that all
   receivers are in the subsurface).
-* Correct for the *Static Shift* by using *TEM*-data; automatic estimation is
-  possible.
 * Define the inversion-line (0-point and angle) and select the receivers for
   this line.
-* Select a frequency-band, that goes into the inversion.
-* Deselect bad data-points.
-* Define error-levels.
+* Select the frequency-band that goes into the inversion.
+* Deselect bad data.
+* Define error levels.
 * Show Robert L. Parkers D+ approximation.
-* `Edi2Mare` will create the file `*.emdata`, which can subsequently be loaded
-  with `Mamba2D`.
 
 ## User interface
 
@@ -75,8 +74,11 @@ information. A few notes:
      For instance:
 
      > 10_MT-1       749570.000      2224523.000      1620.125
+
      > 11_MT-2       747507.000      2223857.000      1565.855
+
      > 12_MT-3       745604.000      2224368.000      1526.000
+
      > 13_MT-Test    755432.000      2222445.000      1795.514
 
   2. The names of the `*.edi`-, `*.wln`-, and `*.tem`-files and the names of
