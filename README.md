@@ -2,9 +2,9 @@
 
 `Edi2Mare` is a little GUI to help you to convert EDI-files into the correct
 format to run inversions with `MARE2DEM`. Its development has been sponsored by
-**GEOTEM Ingeniería S.A. de C.V.** in Mexico City, and it has been released to
-the public under the GNU General Public License V3. So far it has only been
-used with files created with `ProcMT` and with `WinGLink`.
+**GEOTEM Ingeniería S.A. de C.V.** (<http://geotem.com.mx>) in Mexico City, and
+it has been released to the public under the GNU General Public License V3. So
+far it has only been used with files created with `ProcMT` and with `WinGLink`.
 
 
 * `MARE2DEM` is a parallel adaptive finite element code for 2D forward and
