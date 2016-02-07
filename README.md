@@ -84,6 +84,7 @@ information. A few notes:
      * `13_mt_auto_processing_median.edi`
      * `13_NETEM.tem`
      * `coordinates.txt`  
+
        > 13_MT-Test     755432.000      2222445.000    1795.514
 
      The part following the number (`##_`) in the names of `coordinates.txt`
