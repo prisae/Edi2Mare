@@ -14,16 +14,6 @@ files created with `ProcMT` and with `WinGLink`.
    interpret and integrate several geophysical disciplines in a unique
    interpretation model, <http://www.slb.com>.
 
-## Summary
-
-With `Edi2Mare` you can:
-
-* Prepare `*.edi`-files for `Mamba2D` and `MARE2DEM`.
-* Use `*.tem`-files to correct for *static shift*.
-* You can use `*.wln`-files, exported from *WinGLink*, instead of `*.edi`-files 
-* `Edi2Mare` will create the file `*.emdata`, which can subsequently be loaded
-  with `Mamba2D`.
-
 
 ## Some warnings:
 
@@ -37,10 +27,13 @@ With `Edi2Mare` you can:
    `*.wln`-files from `WinGLink`.
 
 
-## Edi2Mare
-jith `Edi2Mare` you can:
+## Summary
 
-* Read `*.edi`- or `*.wln`-files, and `*.tem`-files.
+With `Edi2Mare` you can:
+
+* Prepare `*.edi`-files for `Mamba2D` and `MARE2DEM`.
+* Use `*.tem`-files to correct for *static shift*.
+* You can use `*.wln`-files, exported from *WinGLink*, instead of `*.edi`-files.
 * Adjust the altitude of the receivers, *Z-shift* (`MARE2DEM` requires that all
   receivers are in the subsurface).
 * Correct for the *Static Shift* by using *TEM*-data; automatic estimation is
@@ -51,13 +44,15 @@ jith `Edi2Mare` you can:
 * Deselect bad data-points.
 * Define error-levels.
 * Show Robert L. Parkers D+ approximation.
-* Write the data to `*.emdata` for `MARE2DEM`.
+* `Edi2Mare` will create the file `*.emdata`, which can subsequently be loaded
+  with `Mamba2D`.
 
 ## User interface
 
+Example screenshot:
 ![Image of Yaktocat](Edi2Mare.jpg)
 
-I believe the `Edi2Mare` is simple enough that it does not require lots of
+I believe that `Edi2Mare` is simple enough so it does not require lots of
 information. A few notes:
 
 * Installation: Just copy the whole repo to your computer, and add the path to
@@ -73,14 +68,17 @@ information. A few notes:
   1. In the data-folder you need a file `coordinates.txt`. The format of this
      file is:
 
-     > Nombre        Easting         Northing      Altitude
+     `Name        Easting         Northing      Altitude`
 
      For instance:
 
-     > 10_MT-1       749570.000      2224523.000      1620.125
-     > 11_MT-2       747507.000      2223857.000      1565.855
-     > 12_MT-3       745604.000      2224368.000      1526.000
-     > 13_MT-Test    755432.000      2222445.000      1795.514
+     `10_MT-1       749570.000      2224523.000      1620.125`
+
+     `11_MT-2       747507.000      2223857.000      1565.855`
+
+     `12_MT-3       745604.000      2224368.000      1526.000`
+
+     `13_MT-Test    755432.000      2222445.000      1795.514`
 
   2. The names of the `*.edi`-, `*.wln`-, and `*.tem`-files and the names of
      `coordinates.txt` have to start with the same 2-digit number, for instance:
@@ -88,12 +86,12 @@ information. A few notes:
      * `13_mt_auto_processing_median.edi`
      * `13_NETEM.tem`
      * `coordinates.txt`
-       > 13_MT-Test     755432.000      2222445.000    1795.514
+       `13_MT-Test     755432.000      2222445.000    1795.514`
 
      The part following the number (`##_`) in the names of `coordinates.txt`
      is used to name the receivers; in the example the used name for that
      receiver would be `MT-Test`.
-     These names an the file-names may not contain spaces.
+     These names and the file-names may not contain spaces.
 * Z-Shift is positive facing downwards (convention from `MARE2DEM`).
 * The automatic *Fit* for the *Static Shift* is just a suggestion, not
   necessarily the best values; it is a minimization between MT and TEM data.
