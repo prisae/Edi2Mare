@@ -73,12 +73,9 @@ information. A few notes:
 
      For instance:
 
-     > 10_MT-1       749570.000      2224523.000      1620.125
-
-     > 11_MT-2       747507.000      2223857.000      1565.855
-
-     > 12_MT-3       745604.000      2224368.000      1526.000
-
+     > 10_MT-1       749570.000      2224523.000      1620.125  
+     > 11_MT-2       747507.000      2223857.000      1565.855  
+     > 12_MT-3       745604.000      2224368.000      1526.000  
      > 13_MT-Test    755432.000      2222445.000      1795.514
 
   2. The names of the `*.edi`-, `*.wln`-, and `*.tem`-files and the names of
@@ -86,7 +83,7 @@ information. A few notes:
 
      * `13_mt_auto_processing_median.edi`
      * `13_NETEM.tem`
-     * `coordinates.txt`
+     * `coordinates.txt`  
        > 13_MT-Test     755432.000      2222445.000    1795.514
 
      The part following the number (`##_`) in the names of `coordinates.txt`
@@ -98,20 +95,20 @@ information. A few notes:
   necessarily the best values; it is a minimization between MT and TEM data.
 * North and East are given in kilometers in `Edi2Mare`.
 * The angle of the inversion-line is counterclockwise, in degrees.
-* The *System* is for instance `14 N`, the UTM Coordinate System.
+* The *System* is for instance `14 N`; the UTM Coordinate System.
 * The errors are in %.
 
-## `Edi2Mare` with data exported from `WinGLink`.
+## `Edi2Mare` with data exported from `WinGLink`
 
 The idea of `Edi2Mare` was to create the file `*.emdata` for `MARE2DEM` from
-`*.edi`-files created from `ProcMT`. If you have MT data in WinGLink, there is
-a possibility to use them for `Edi2Mare` too.: You have to export the MT data
+`*.edi`-files created with `ProcMT`. If you have MT data in WinGLink, there is
+a possibility to use them for `Edi2Mare` too. You have to export the MT data
 as `*.wln`-files: Open the data in `WinGLink` => `Soundings`, and then `Files`
 => `Edit data ...` => `File` => `Export to File...` and save them with the
 ending `.wln`.  (Exporting `*.edi`-files does not work, because then you would
 export the original file, without the changes you made in `WinGLink`.)
 
-The functionality of `Edi2Mare` is limited, if you use `*.wln`-files instead
+The functionality of `Edi2Mare` is limited if you use `*.wln`-files instead
 of `*.edi`-files. You only see *Apparent Resistivity* and *Phase*, no
 *Impedances*. D+ does not work either. However, it still works to create
 the `*.emdata`-file and subsequently run an inversion with `MARE2DEM`.
