@@ -56,8 +56,10 @@ Example screenshot:
 I believe that `Edi2Mare` is simple enough so it does not require lots of
 information. A few notes:
 
-* Installation: Just copy the whole repo to your computer, and add the path to
-  your `MATLAB`-paths.
+* **Installation:**
+    - Just copy the whole repo to your computer, and add the path to your
+      `MATLAB`-path.
+    - `MARE2DEM` must be in your `Matlab`-path.
 * To start `Edi2Mare`, just execute `Edi2Mare` in the `MATLAB` command line.
 * Many elements will show additional information if you hoover over them with
   your mouse.
