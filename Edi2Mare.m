@@ -21,8 +21,8 @@ function Edi2Mare
 % along with Edi2Mare.  If not, see <http://www.gnu.org/licenses/>.
 
 %% Add GUI path (in case it wasn't done)
-%[pathstr, ~, ~] = fileparts(which('Edi2Mare'));
-%addpath(pathstr, fullfile(pathstr, 'GUI'), '-BEGIN')
+[pathstr, ~, ~] = fileparts(which('Edi2Mare'));
+addpath(pathstr, fullfile(pathstr, 'GUI'), '-BEGIN')
 
 %% Initialization tasks
 
