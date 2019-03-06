@@ -28,6 +28,13 @@ far it has only been used with files created with `ProcMT` and with `WinGLink`.
    improve the code, then please go ahead!
 3. `Edi2Mare` was only tested with `*.edi`-files from `ProcMT`, and
    `*.wln`-files from `WinGLink`.
+4. There are apparently different possible formats for `*.wln`-files. At the
+   moment, only two are supported. 4 header lines are expected for both, and
+   the frequency values must be in the first column. Then, Rho XY, Phi XY, Rho
+   YX, and Phi YX are expected either in columns {2, 3, 4, 5} or in columns {3,
+   5, 7, 9}. In the first case, the file must have less than 9 columns. This
+   part is fragile. If you have an issue with loading `*.wln`-files, have a
+   look at the file `GUI/load_data.m` from line 230 onwards.
 
 
 ## Summary

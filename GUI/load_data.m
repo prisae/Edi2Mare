@@ -228,15 +228,27 @@ if fromedi % EDIs
     end
 
 else % WLNs
+    % There are different variations of wln-formats. This part is very
+    % fragile and should be improved. Currently just two formats are
+    % supported.
     tdat = textscan(fid, '%f %f %f %f %f %f %f %f %f', 'HeaderLines', 4);
     out.freq  = tdat{:,1}';
-    out.xy_a = tdat{:,3}';
+    if sum(isnan(tdat{:,9})) > 1
+        % Format 1: freq, xy_a, xy_p, yx_a, yx_p
+        out.xy_a = tdat{:,2}';
+        out.xy_p = tdat{:,3}';
+        out.yx_a = tdat{:,4}';
+        out.yx_p = tdat{:,5}'+180;
+    else
+        % Format 2: freq, ?, xy_a, ?, xy_p, ?, yx_a, ?, yx_p
+        out.xy_a = tdat{:,3}';
+        out.xy_p = tdat{:,5}';
+        out.yx_a = tdat{:,7}';
+        out.yx_p = tdat{:,9}'+180;
+    end
     out.xy_va = nan(size(out.freq));
-    out.xy_p = tdat{:,5}';
     out.xy_vp = nan(size(out.freq));
-    out.yx_a = tdat{:,7}';
     out.yx_va = nan(size(out.freq));
-    out.yx_p = tdat{:,9}'+180;
     out.yx_vp = nan(size(out.freq));
 end
 
